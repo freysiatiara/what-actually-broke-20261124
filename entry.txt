@@ -1,0 +1,1 @@
+We deleted the backup to save space, then deleted the original to test the backup. There is no step three.
