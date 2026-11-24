@@ -25,6 +25,10 @@ def output_path():
 
 
 def main():
+    # The gate only accepts 1-200 characters of non-blank text; refuse to
+    # write anything else rather than emit an entry that scores zero.
+    if not LINE.strip() or len(LINE) > 200:
+        raise SystemExit("entry line fails the gate: must be 1-200 characters")
     path = output_path()
     parent = os.path.dirname(path)
     if parent:
